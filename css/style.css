@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,15 +9,15 @@
 
 html,
 body {
-  font-family: 'Rubik', sans-serif;
-  background: #000;
-  color: #fff;
-  line-height: 1.7;
+  font-family: "Rubik", sans-serif;
+  background: black;
+  color: white;
+  line-height: 2.7;
   overflow-x: hidden;
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -45,12 +46,11 @@ h4 {
 
 .btn {
   display: inline-block;
-  background: #fff;
+  background: white;
   color: #333;
   min-width: 135px;
   padding: 20px 32px;
   font-size: 15px;
-  font-weight: 600;
   line-height: 14px;
   border: none;
   border-radius: 5px;
@@ -65,13 +65,13 @@ h4 {
 
 .btn-outline {
   background: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: white;
+  border: 2px solid white;
 }
 
 .btn-outline:hover {
-  color: #fff;
-  border-color: #ccc;
+  color: #ccc;
+  border-color: white;
 }
 
 .btn-dark {
@@ -103,13 +103,15 @@ h4 {
   margin-bottom: 10px;
   font-size: 24px;
 }
-
 /* Header */
 .header {
-  height: 530px;
+  height: 500px;
   background: url(../img/header.jpg) no-repeat center center / cover;
 }
 
+.header-content .h4 {
+  color: #00ed82;
+}
 .header nav {
   display: flex;
   justify-content: flex-end;
@@ -122,21 +124,19 @@ h4 {
   cursor: pointer;
   background: none;
   border: none;
-  color: #fff;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .header .logo {
   width: 270px;
   margin: 20px 0;
 }
-
+/* coluna faz ir pra vertical, muda a direção; */
 .header .header-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   margin-top: 30px;
 }
@@ -148,11 +148,11 @@ h4 {
 
 .header .header-text-2 {
   font-size: 18px;
-  margin: 25px 0;
+  font-weight: 25px 0;
 }
 
 .header::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -171,9 +171,9 @@ h4 {
 .sub-header {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
-  padding: 30px 40px;
+  padding: 25px;
   background: linear-gradient(
     318.68deg,
     #0f495c 0%,
@@ -191,14 +191,16 @@ h4 {
   text-align: center;
 }
 
+/* Categorias */
 /* Categories */
 .categories {
+  font-family: Montserrat, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 90px 40px;
+  padding: 50px 40px;
 }
 
 .categories .covers {
@@ -216,6 +218,7 @@ h4 {
 
 .categories .cover-grad {
   position: absolute;
+  font-weight: bold;
   top: 0;
   left: 0;
   width: 100%;
@@ -236,16 +239,16 @@ h4 {
 }
 
 .categories .cover-1 {
-  background: url('../img/cover-1.jpg') no-repeat center center / cover;
+  background: url("../img/cover-1.jpg") no-repeat center center / cover;
 }
 .categories .cover-2 {
-  background: url('../img/cover-2.jpg') no-repeat center center / cover;
+  background: url("../img/cover-2.jpg") no-repeat center center / cover;
 }
 .categories .cover-3 {
-  background: url('../img/cover-3.jpg') no-repeat center center / cover;
+  background: url("../img/cover-3.jpg") no-repeat center center / cover;
 }
 .categories .cover-4 {
-  background: url('../img/cover-4.jpg') no-repeat center center / cover;
+  background: url("../img/cover-4.jpg") no-repeat center center / cover;
 }
 
 /* Live */
@@ -272,42 +275,7 @@ h4 {
   text-decoration: underline;
 }
 
-/* Live Sports */
-.live-sports {
-  background: url('../img/live-sports.jpg') no-repeat center center / cover;
-  height: 800px;
-  position: relative;
-}
-
-.live-sports-content {
-  position: absolute;
-  top: 160px;
-  left: 100px;
-  max-width: 550px;
-}
-
-.live-sports-logos {
-  width: 300px;
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.live-sports-logos > div {
-  background: url('../img/network-logo-bg.png') no-repeat center center / cover;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.live-sports-logos img {
-  width: 40px;
-}
-
-/* Footer */
+/*Footer */
 .footer {
   background: #ebedf2;
   color: #333;
@@ -349,7 +317,6 @@ h4 {
 
 /* Modal */
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -357,6 +324,8 @@ h4 {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-box {
@@ -364,7 +333,7 @@ h4 {
   width: 400px;
   background: #fff;
   color: #333;
-  position: relative;
+  /*  position: relative; */
   animation: modalopen 1s;
 }
 
@@ -408,11 +377,15 @@ h4 {
   text-align: center;
 }
 
+.modal .span {
+  color: gray;
+}
+
 .modal .modal-footer a {
   color: steelblue;
 }
 
-/* Form */
+/* Formulário */
 .form-control {
   margin: 20px 0;
 }
@@ -430,13 +403,17 @@ h4 {
   padding: 5px;
 }
 
-/* Media Queries */
+.form-control p {
+  text-emphasis-color: gray;
+}
+
+/* Responsividade */
+
 @media (max-width: 1100px) {
   .categories .covers {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 768px) {
   .header .logo {
     width: 200px;
@@ -447,11 +424,11 @@ h4 {
     padding: 0 20px;
   }
 
-  .header .header-text-1 {
+  .header .header-text1 {
     margin-bottom: 40px;
   }
 
-  .header .header-text-2 {
+  .header .header-text2 {
     display: none;
   }
 
@@ -468,7 +445,7 @@ h4 {
 
   .sub-header > div:last-of-type {
     justify-self: center;
-    align-self: center;
+    align-items: center;
   }
 
   .text-xl {
@@ -482,21 +459,6 @@ h4 {
 
   .categories .covers {
     grid-template-columns: 1fr;
-  }
-
-  .live-border {
-    padding: 30px 10px;
-  }
-
-  .live-sports {
-    background: url('../img/live-sports-small.jpg') no-repeat center center /
-      cover;
-  }
-
-  .live-sports-content {
-    top: 30px;
-    left: 30px;
-    margin-top: 60px;
   }
 
   .footer-lists {
